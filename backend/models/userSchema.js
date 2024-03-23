@@ -64,4 +64,3 @@ userSchema.methods.getJWTToken = function (){
 
 export const User = mongoose.model("User", userSchema);
 
-//paused 1:48:34
