@@ -33,19 +33,16 @@ const jobSchema = new mongoose.Schema({
     },
     fixedSalary:{
         type : Number,
-        required: [true, "Please provide Fixed Salary"],
         minLength: [4, "Fixed salary start from minimum 4 digits"],
         maxLength: [9, "Fixed salary cannot exceed 9 digits"]
     },
     salaryFrom:{
         type : Number,
-        required: [true, "Please provide minimum preferable salary"],
         minLength: [4, "Salary range start from 4 digits"],
         maxLength: [9, "Salary range limited to 9 digits"],
     },
     salaryTo:{
         type : Number,
-        required: [true, "Please provide maximum preferable salary"],
         minLength: [4, "Salary range start from 4 digits"],
         maxLength: [9, "Salary range limited to 9 digits"],
     },
