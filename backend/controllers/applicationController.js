@@ -120,6 +120,7 @@ export const employerGetAllApplications = catchAsyncError(
   
   export const jobseekerDeleteApplication = catchAsyncError(
     async (req, res, next) => {
+      console.log("RESPONSE", res)
       const { role } = req.user;
       if (role === "Employer") {
         return next(
