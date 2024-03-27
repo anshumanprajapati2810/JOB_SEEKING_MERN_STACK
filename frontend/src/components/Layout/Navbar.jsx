@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import {Context} from "../../main";
+import {Context} from "../../main.jsx";
 import { useNavigate, Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import {GiHamburgerMenu} from "react-icons/gi"
@@ -7,7 +7,7 @@ import {GiHamburgerMenu} from "react-icons/gi"
 
 const Navbar = () => {
   const [show, setShow] = useState();
-  const [isAuthorized, setIsAuthorized, user ] = useContext(Context);
+  const {isAuthorized, setIsAuthorized, user } = useContext(Context);
   const navigateTo = useNavigate();
 
 

@@ -21,12 +21,17 @@ const Register = () => {
   const handleRegister = async (e) =>{
     e.preventDefault();
     try {
-      const {data} = await axios.post("http://localhost:4000/api/v1/user/register",{name,email,password,phone,role},{withCredentials: true, headers:
-      {
-        "Content-Type" : "application/json" ,
-      },
-    } 
-    );
+      const { data } = await axios.post(
+        "http://localhost:4000/api/v1/user/register",
+        { name, phone, email, role, password },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+          withCredentials: true,
+        }
+      );
     toast.success(data.message);
     setEmail("");
     setName("");
@@ -37,9 +42,10 @@ const Register = () => {
     } catch (error) {
       toast.error(error.response.data.message); 
     }
-    if(isAuthorized){
-      return <Navigate to={"/"}/>
-    }
+    
+  }
+  if(isAuthorized){
+    return <Navigate to={"/"}/>
   }
 
   return (
