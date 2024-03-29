@@ -13,7 +13,7 @@ const app = express();
 dotenv.config({path:"../.env"})
 
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: "https://job-seeking-mern-stack.vercel.app/login",
     methods:["GET", "POST", "PUT", "DELETE"],
     credentials:true,   
 },));
