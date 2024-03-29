@@ -11,9 +11,9 @@ import {errorMiddleware} from "./middlewares/error.js";
 
 const app = express();
 dotenv.config({path:"../.env"})
-
+const allowedOrigins = ["http://localhost:5173", "https://job-seeking-mern-stack.vercel.app"]
 app.use(cors({
-    origin: "*",
+    origin: allowedOrigins,
     methods:["GET", "POST", "PUT", "DELETE"],
     credentials:true,   
 },));
