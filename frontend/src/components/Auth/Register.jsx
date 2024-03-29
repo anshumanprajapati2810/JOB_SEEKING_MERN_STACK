@@ -27,7 +27,6 @@ const Register = () => {
         {
           headers: {
             "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
           },
           withCredentials: true,
         }
@@ -43,7 +42,7 @@ const Register = () => {
       toast.error(error.response.data.message); 
     }
     
-  }
+  };
   if(isAuthorized){
     return <Navigate to={"/"}/>
   }
