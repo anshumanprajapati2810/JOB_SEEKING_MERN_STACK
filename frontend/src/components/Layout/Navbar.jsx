@@ -19,6 +19,7 @@ const Navbar = () =>  {
           withCredentials: true,
         }
       );
+      console.log("response: " + response.data);
       toast.success(response.data.message);
       setIsAuthorized(false);
       navigateTo("/login");
