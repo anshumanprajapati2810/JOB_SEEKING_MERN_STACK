@@ -13,6 +13,7 @@ const Navbar = () =>  {
 
   const handleLogout = async () => {
     try {
+      debugger;
       const response = await axios.post(
         "https://job-seeking-mern-stack.onrender.com/api/v1/user/logout",
         {
