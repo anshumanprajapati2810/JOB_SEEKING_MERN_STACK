@@ -26,6 +26,7 @@ const Register = () => {
         { name, phone, email, role, password },
         {
           headers: {
+            "Access-Allow-Origin": "*",
             "Content-Type": "application/json",
           },
           withCredentials: true,
