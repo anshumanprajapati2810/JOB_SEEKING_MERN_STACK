@@ -13,14 +13,13 @@ const Navbar = () =>  {
 
   const handleLogout = async () => {
     try {
-      debugger;
       const response = await axios.post(
         "https://job-seeking-mern-stack.onrender.com/api/v1/user/logout",
         {
           withCredentials: true,
         }
       );
-      console.log("response: " + response.data);
+      // console.log("response: " + response.data);
       toast.success(response.data.message);
       setIsAuthorized(false);
       navigateTo("/login");
